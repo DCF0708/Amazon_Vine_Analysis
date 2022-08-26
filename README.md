@@ -4,20 +4,20 @@
 
 **Technologies**: Amazon Web Services (RDS, S3, limited CLI), Amazon Vine, Google Colab (Python), PGAdmin, PySpark
 
-The code solutions for this project (*.ipynb files*) are executed in Google Colaboratory. This decision was made to provide full accessability in preparation for the handing off of maintenance responsibilites to the client upon this projects completion. The Colab platform also provides access to cloud-based computational resources that guarentee the users ablility to replicate any results regardless of data set size.
+The code solutions for this project (*.ipynb files*) are executed in Google Colaboratory. Colab provisions full accessibility in preparation for handing over maintenance responsibilities to the client upon the completion of this project. The Colab platform also provides access to cloud-based computational resources that guarantee the user's ablility to replicate any results regardless of data set size.
 
 * **
 
 ## **Overview**
-**Background**: Amazon Vine is a service that allows manufacturers and publishers to receive reviews for their products. The manufacturer/publisher pays a fee to Amazon and provides products to Amazon Vine members in exchange for product reviews. 
+**Background**: Amazon Vine is a service that allows manufacturers and publishers to receive reviews for products. The manufacturer/publisher pays a fee to Amazon and provides products to Amazon Vine members in exchange for product reviews. 
 
 
-This project is designed to sift through the review dataset from any subsection provided by Amazon Vine to determine if there is any bias in the number of stars awarded in paid product reviews vs unpaid. There are 50 datasets in total available on Amazon Vine, with each individual dataset corresponding to the reviews from a subcategory of products currently for sale on Amazon. The code provided in the repository accesses reviews from the "*Watches*" subcategory of Amazon Vine. However, the exercise below is conducted using the dataset from the "*Automotive*" subcategory, purely to exemplify the type of insights that can be deduced from evaluation. For all intents and purposes, this repository can be used as a general template to replicate results for any review data subcategory in the future. 
+This project sifts through the review dataset from any subsection provided by Amazon Vine to determine if there is any bias in the number of stars awarded in paid product reviews vs. unpaid. There are 50 datasets available on Amazon Vine. Individual datasets hold reviews from each of the 50 product categories currently listed on Amazon. The code provided in the repository accesses reviews from the "*Watches*" subcategory of Amazon Vine. However, the exercise below was conducted using data from the "*Automotive*" subcategory to demonstrate the insights resulting from the evaluation. This repository can be used as a general template to replicate results for any review data subcategory in the future. 
 </br>
 
 * ** 
 ## **Procedure**
-***Note***: The procedure outlined below begins after acquiring the target dataset from Amazon Vine's API. The raw data set is then uploaded to an S3 bucket in Amazon RDS. This step is not required, and exists merely to showcase fluency in using Amazon Web Services. It is also assumed that the postgres tables are already formatted to match the dataframes generated in step 3.
+***Note***: The procedure outlined below begins after acquiring the target dataset from Amazon Vine's API. The raw data set is uploaded to an S3 bucket in Amazon RDS. This step is not required and exists merely to showcase fluency in using Amazon Web Services. It is also assumed that the Postgres tables are already formatted to match the data frames that will be generated in step 3.
 
 **1.) Import dependencies and drivers that allow spark to interact with postgres.**</br>
 **2.) Load the target data from S3 into a spark dataframe.**</br>
